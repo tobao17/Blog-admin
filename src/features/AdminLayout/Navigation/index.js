@@ -1,5 +1,5 @@
 import React from 'react';
-import useWindowSize from '../../../../hooks/useWindowSize';
+import useWindowSize from '../../../hooks/useWindowSize';
 
 import NavLogo from './NavLogo';
 import NavContent from './NavContent';

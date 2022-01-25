@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Media } from 'react-bootstrap';
 
-const images = require.context('../../../../../../../../../assets/images/user', true);
+const images = require.context('../../../../../../../../assets/images/user', true);
 
 const Messages = ({ message, photo, name }) => {
   console.log('hello');

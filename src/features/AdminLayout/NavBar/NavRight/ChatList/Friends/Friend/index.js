@@ -2,7 +2,7 @@ import React from 'react';
 import { Media } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const images = require.context('../../../../../../../../assets/images/user', true);
+const images = require.context('../../../../../../../assets/images/user', true);
 
 const Friend = ({ data, activeId, clicked }) => {
   let photo = images(`./${data.photo}`);

@@ -1,41 +1,15 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+
 import { ListGroup, Dropdown, Media } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-// import axios from 'axios';
-
 import ChatList from './ChatList';
-// import { API_SERVER } from '../../../../config/constant';
-// import { LOGOUT } from './../../../../store/actions';
-
-import avatar1 from '../../../../../assets/images/user/avatar-1.jpg';
-import avatar2 from '../../../../../assets/images/user/avatar-2.jpg';
-import avatar3 from '../../../../../assets/images/user/avatar-3.jpg';
-import avatar4 from '../../../../../assets/images/user/avatar-4.jpg';
+import avatar1 from '../../../../assets/images/user/avatar-1.jpg';
+import avatar2 from '../../../../assets/images/user/avatar-2.jpg';
+import avatar3 from '../../../../assets/images/user/avatar-3.jpg';
+import avatar4 from '../../../../assets/images/user/avatar-4.jpg';
 
 const NavRight = () => {
-  //   const account = useSelector((state) => state.account);
-  //   const dispatcher = useDispatch();
-
-  //   const [listOpen, setListOpen] = useState(false);
-
-  //   const handleLogout = () => {
-  //     axios
-  //       .post(API_SERVER + 'users/logout', {}, { headers: { Authorization: `${account.token}` } })
-  //       .then(function (response) {
-  //         // Force the LOGOUT
-  //         //if (response.data.success) {
-  //         dispatcher({ type: LOGOUT });
-  //         //} else {
-  //         //    console.log('response - ', response.data.msg);
-  //         //}
-  //       })
-  //       .catch(function (error) {
-  //         console.log('error - ', error);
-  //       });
-  //   };
-
   return (
     <React.Fragment>
       <ListGroup as="ul" bsPrefix=" " className="navbar-nav ml-auto" id="navbar-right">
@@ -152,10 +126,7 @@ const NavRight = () => {
               <div className="pro-head">
                 <img src={avatar1} className="img-radius" alt="User Profile" />
                 <span>User Menu</span>
-                <Link
-                  to="#"
-                  className="dud-logout" //onClick={handleLogout} title="Logout"
-                >
+                <Link to="#" className="dud-logout">
                   <i className="feather icon-log-out" />
                 </Link>
               </div>
@@ -191,9 +162,7 @@ const NavRight = () => {
           </Dropdown>
         </ListGroup.Item>
       </ListGroup>
-      <ChatList
-      //listOpen={listOpen} closed={() => setListOpen(false)}
-      />
+      <ChatList />
     </React.Fragment>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { ListGroup } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ import NavBadge from '../NavBadge';
 
 // import { ConfigContext } from '../../../../../contexts/ConfigContext';
 // import * as actionType from '../../../../../store/actions';
-import useWindowSize from '../../../../../../hooks/useWindowSize';
+import useWindowSize from '../../../../../hooks/useWindowSize';
 
 const NavItem = ({ layout, item }) => {
   const windowSize = useWindowSize();

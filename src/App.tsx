@@ -1,5 +1,6 @@
 import React from 'react';
-import AdminLayout from './features/Layout/AdminLayout/index';
+import AdminLayout from './features/AdminLayout/index';
+import SignIn from './features/Authentication/SignIn';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <AdminLayout>
         <>hello</>
       </AdminLayout>
+      {/* <SignIn></SignIn> */}
     </div>
   );
 }
