@@ -2,8 +2,11 @@ import React, { useRef } from 'react';
 
 import Navigation from './Navigation';
 import NavBar from './NavBar';
+import SidebarActions from '../Common/SidebarActions';
 import SignIn from '../Authentication/SignIn/index';
+import Loading from '../Common/Loading';
 import useWindowSize from '../../hooks/useWindowSize';
+import BlogPosts from '../BlogPosts/BlogPosts';
 
 const AdminLayout = ({ children }) => {
   const windowSize = useWindowSize();
@@ -24,7 +27,13 @@ const AdminLayout = ({ children }) => {
         <div className={mainClass.join(' ')}>
           <div className="pcoded-content">
             <div className="pcoded-inner-content">
-              <SignIn></SignIn>
+              {
+                <>
+                  <Loading></Loading>
+                  <BlogPosts></BlogPosts>
+                  {/* <SidebarActions></SidebarActions> */}
+                </>
+              }
             </div>
           </div>
         </div>
